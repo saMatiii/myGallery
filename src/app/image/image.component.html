@@ -1,0 +1,26 @@
+
+<div class="row">
+  <div class="col-md-3 ">
+    <ul (keypress)="Onkeyup()">
+      <li *ngFor="let image of imageList" >
+        <a [routerLink] ="['/image', image.id]" >
+          <img src="{{image.url}}" class="tn" width="230" height="160"/>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="col-md-9">
+      <div>
+        <div [ngStyle]="{'background-image':'url('+ image.url +')'}" class="img-container paper">
+        </div>
+      </div>
+      <div class="row">
+         <div class="col-md-8 caption-row">
+          <span id="caption">
+            {{image.caption}}
+          </span>
+        </div>
+      </div>
+  </div>
+</div>
+

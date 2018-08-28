@@ -1,0 +1,14 @@
+<div class="container">
+  <h3 style="text-align: center;margin:10px 0px 0px 0px;">{{photos}}</h3>
+  <button class="btn bnt-lg btn-info" [class.active]="filterby=='all'" (click)="onFilter('all')">ALL</button>
+  <button class="btn bnt-lg btn-info" [class.active]="filterby=='boats'" (click)=" onFilter('boats')">Boats</button>
+  <button class="btn bnt-lg btn-info" [class.active]="filterby=='camping'" (click)="onFilter('camping')">Camping</button>
+  <button class="btn bnt-lg btn-info" [class.active]="filterby=='library'" (click)="onFilter('library')">Library</button>
+  <ul >
+    <li *ngFor="let image of imageList" >
+      <a [routerLink] ="['/image', image.id]">
+       <img src="{{image.url}}" class="tn" width="230" height="160"/>
+      </a>
+    </li>
+  </ul>
+</div>

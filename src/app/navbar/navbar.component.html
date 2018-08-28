@@ -1,0 +1,22 @@
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand logo"  routerLink="/gallery">{{title}}</a>
+      </div>
+      <div class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search image" aria-label="Search" #box (keyup.enter)="onSearch(box.value)">
+        <button class="btn btn-outline-info my-2 my-sm-0" (click)="onSearch(box.value)">Search</button>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <!-- <ul class="nav navbar-nav"> -->
+        <!--   <li class="active"><a href="#">Latest Images</a></li> -->
+        <!--   <li><a href="#">Boats</a></li> -->
+        <!--   <li><a href="#">Hiking</a></li> -->
+        <!--   <li><a href="#">London</a></li> -->
+        <!-- </ul> -->
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+
+
+
