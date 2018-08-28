@@ -11,6 +11,10 @@ import {ImageService} from "./image/shared/image.service";
 import { FilterPipe } from './image/shared/filter.pipe';
 import {RouterModule} from "@angular/router";
 import {appRoutes} from "./app-routing.module";
+import {MatButtonModule} from '@angular/material/button';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {NgxPaginationModule} from "ngx-pagination";
 
 
 @NgModule({
@@ -19,12 +23,16 @@ import {appRoutes} from "./app-routing.module";
     NavbarComponent,
     GalleryComponent,
     ImageComponent,
-    FilterPipe,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
     AlertModule.forRoot(),
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    MatButtonModule,
+    MatPaginatorModule,
+    BrowserAnimationsModule,
+    NgxPaginationModule
   ],
   providers: [ImageService,FilterPipe],
   bootstrap: [AppComponent]
