@@ -1,5 +1,4 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
@@ -15,6 +14,8 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {NgxPaginationModule} from "ngx-pagination";
+import { SideBareComponent } from './side-bare/side-bare.component';
+import {NgModule} from "@angular/core";
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import {NgxPaginationModule} from "ngx-pagination";
     NavbarComponent,
     GalleryComponent,
     ImageComponent,
-    FilterPipe
+    FilterPipe,
+    SideBareComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +34,7 @@ import {NgxPaginationModule} from "ngx-pagination";
     MatButtonModule,
     MatPaginatorModule,
     BrowserAnimationsModule,
-    NgxPaginationModule
+    NgxPaginationModule,
   ],
   providers: [ImageService,FilterPipe],
   bootstrap: [AppComponent]
