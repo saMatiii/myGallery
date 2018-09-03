@@ -5,12 +5,16 @@ import {Subject} from "rxjs/index";
   providedIn: 'root'
 })
 export class StoreService {
-private EventEmitter<String> store = new EventEmitter<>();
+private  store = new  EventEmitter();
 
   constructor() { }
 
   notify(keyword :String){
    this.store.next(keyword);
+  }
+
+  listen(listnner:any){
+    this.store.subscribe(listnner);
   }
 
 

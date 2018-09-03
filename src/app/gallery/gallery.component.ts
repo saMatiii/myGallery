@@ -21,8 +21,7 @@ export class GalleryComponent implements OnChanges ,OnInit{
 
 
   constructor(private imageService:ImageService,private router:Router,private aRoute:ActivatedRoute, private storeService:StoreService) {
-    console.log("constructor : "+this.barkeyword);
-    this.storeService.subscribe((keyword: string) => {
+    this.storeService.listen((keyword: string) => {
         if(keyword!='all'){
           this.imageList = this.imageService.getImages().filter(element => {
             return element.category === keyword;
@@ -35,7 +34,6 @@ export class GalleryComponent implements OnChanges ,OnInit{
   }
 
   ngOnChanges(){
-    console.log("on chnage : "+this.barkeyword);
   };
 
   ngOnInit(){
