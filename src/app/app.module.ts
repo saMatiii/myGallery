@@ -16,6 +16,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {NgxPaginationModule} from "ngx-pagination";
 import { SideBareComponent } from './side-bare/side-bare.component';
 import {NgModule} from "@angular/core";
+import {MatMenuModule} from "@angular/material";
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import {NgModule} from "@angular/core";
     MatPaginatorModule,
     BrowserAnimationsModule,
     NgxPaginationModule,
+    MatMenuModule
   ],
   providers: [ImageService,FilterPipe],
   bootstrap: [AppComponent]

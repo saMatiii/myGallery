@@ -13,7 +13,8 @@
 }
 
 .list-group-item{
-  background-color: #424242;
-  color:#bbbbbb;
+  background-color: #616161;
+  color:white;
+  font-style: normal;
   border: 1px solid #bbb;
 }

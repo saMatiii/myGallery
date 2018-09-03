@@ -1,10 +1,22 @@
 <div class="list-group" >
 
-  <a class="list-group-item" (click)="filtering('camping')"><i class="fa fa-key"></i> <span>Camping</span></a>
-  <a class="list-group-item" (click)="filtering('boats')"><i class="fa fa-credit-card"></i> <span>Boats</span></a>
-  <a class="list-group-item" (click)="filtering('library')"><i class="fa fa-question-circle"></i> <span>Library</span></a>
-  <a class="list-group-item" (click)="filtering('Camping')"><i class="fa fa-arrow-circle-o-left"></i> <span>Sandbox Account</span></a>
-  <a class="list-group-item" (click)="filtering('Camping')"><i class="fa fa-book"></i> <span>QuickStart Overview</span></a>
-  <a class="list-group-item" (click)="filtering('Camping')"><i class="fa fa-compass"></i> <span>Documentation</span></a>
+  <button mat-stroked-button color="primary" (click)="filtering('camping')"> <span>Camping</span></button>
+  <button mat-stroked-button color="primary" (click)="filtering('boats')"><i class="fa fa-credit-card"></i> <span>Boats</span></button>
+  <button mat-stroked-button color="primary" (click)="filtering('library')"><i class="fa fa-question-circle"></i> <span>Library</span></button>
+  <button mat-stroked-button color="primary" (click)="filtering('Camping')"><i class="fa fa-arrow-circle-o-left"></i> <span>Sandbox Account</span></button>
+  <button mat-stroked-button color="primary" (click)="filtering('Camping')"><i class="fa fa-book"></i> <span>cars</span></button>
+  <button mat-stroked-button color="primary" (click)="filtering('Camping')"><i class="fa fa-compass"></i> <span>Documentation</span></button>
 
 </div>
+
+
+<button mat-button [matMenuTriggerFor]="menu">Menu</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item  color="primary" (click)="filtering('camping')"> <span>Camping</span></button>
+  <button mat-menu-item  color="primary" (click)="filtering('boats')"><i class="fa fa-credit-card"></i> <span>Boats</span></button>
+  <button mat-menu-item  color="primary" (click)="filtering('library')"><i class="fa fa-question-circle"></i> <span>Library</span></button>
+  <button mat-menu-item  color="primary" (click)="filtering('Camping')"><i class="fa fa-arrow-circle-o-left"></i> <span>Sandbox Account</span></button>
+  <button mat-menu-item  color="primary" (click)="filtering('Camping')"><i class="fa fa-book"></i> <span>cars</span></button>
+  <button mat-menu-item  color="primary" (click)="filtering('Camping')"><i class="fa fa-compass"></i> <span>Documentation</span></button>
+
+</mat-menu>
