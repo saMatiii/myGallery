@@ -3,6 +3,7 @@ import {ImageService} from "../image/shared/image.service";
 import {
   ActivatedRoute , Router, Params
 } from "@angular/router";
+import {StoreService} from "../store.service";
 
 @Component({
   selector: 'app-gallery',
@@ -16,11 +17,12 @@ export class GalleryComponent implements OnChanges ,OnInit{
   id:number = 0;
   keyword:any;
   @Input() filterby? : string ='all';
+  @Input() barkeyword:any;
 
 
-  constructor(private imageService:ImageService,private router:Router,private aRoute:ActivatedRoute) {
-      this.aRoute.params.subscribe((params: Params) => {
-        let keyword = params['keyword'];
+  constructor(private imageService:ImageService,private router:Router,private aRoute:ActivatedRoute, private storeService:StoreService) {
+    console.log("constructor : "+this.barkeyword);
+    this.storeService.subscribe((keyword: string) => {
         if(keyword!='all'){
           this.imageList = this.imageService.getImages().filter(element => {
             return element.category === keyword;
@@ -32,7 +34,9 @@ export class GalleryComponent implements OnChanges ,OnInit{
 
   }
 
-  ngOnChanges(){};
+  ngOnChanges(){
+    console.log("on chnage : "+this.barkeyword);
+  };
 
   ngOnInit(){
     this.imageList = this.imageService.getImages();

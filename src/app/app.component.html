@@ -1,7 +1,7 @@
 <div>
     <app-navbar (listImageEmitter)="reciveNewList($event)"> </app-navbar>
      <div class="row">
-       <div class="col-md-2"> <app-side-bare ></app-side-bare></div>
-       <div class="col-md-10"><router-outlet></router-outlet></div>
+       <div class="col-md-2"> <app-side-bare (barKeyword)="filtring($event)"></app-side-bare></div>
+       <div class="col-md-10"><router-outlet ></router-outlet></div>
      </div>
 </div>

@@ -11,3 +11,9 @@
   right:0;
   padding-top:10%;
 }
+
+.list-group-item{
+  background-color: #424242;
+  color:#bbbbbb;
+  border: 1px solid #bbb;
+}
